@@ -46,7 +46,8 @@
 #pragma once
 
 #include "OcBsDwgClass.h"
-
+#include <vector>
+#include <string.h>
 BEGIN_OCTAVARIUM_NS
 
 class OcBsDwgClasses

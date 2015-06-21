@@ -46,7 +46,6 @@
 #include "OcDbDatabase.h"
 
 
-using namespace google;
 using namespace std;
 using namespace octavarium;
 
@@ -79,15 +78,12 @@ const char* DefaultLogDir()
 
 int main(int argc, char * argv[])
 {
-    OcLogger::Init();
 #if defined(_WIN32) && !defined(NDEBUG)
     // Enable memory dump from within VS.
     _CrtMemState memState;
     _CrtMemCheckpoint(&memState);
 #endif
     {
-        OcLogger logger(argv[0]);
-
         // --v=4 --alsologtostderr=1 --log_dir=$(OutDir)\logs --drawing=C:\Users\Paul\Documents\TestDwgs\EmptyR14.dwg
         ProgramOptions po;
         if(po.Set(argc, argv))

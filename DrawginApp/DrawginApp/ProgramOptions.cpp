@@ -40,7 +40,7 @@
 #include "OcCommon.h"
 #include "ProgramOptions.h"
 
-using namespace google;
+//using namespace google;
 using namespace std;
 
 BEGIN_OCTAVARIUM_NS
@@ -238,122 +238,122 @@ int ProgramOptions::Set( int argc, char * argv[] )
 
 bool ProgramOptions::logtostderr( void )
 {
-    return OcLogger::LogToStdError();
+	return false; //OcLogger::LogToStdError();
 }
 
 void ProgramOptions::logtostderr( bool val )
 {
-    OcLogger::SetLogToStdError(val);
+    //OcLogger::SetLogToStdError(val);
 }
 
 bool ProgramOptions::alsologtostderr( void )
 {
-    return OcLogger::AlsoLogToStdError();
+	return false;// OcLogger::AlsoLogToStdError();
 }
 
 void ProgramOptions::alsologtostderr( bool val )
 {
-    OcLogger::SetAlsoLogToStdError(val);
+    //OcLogger::SetAlsoLogToStdError(val);
 }
 
 int ProgramOptions::stderrthreshold( void )
 {
-    return OcLogger::StdErrorThreshold();
+	return 0;// OcLogger::StdErrorThreshold();
 }
 
 void ProgramOptions::stderrthreshold( int val )
 {
-    OcLogger::SetStdErrorThreshold(val);
+    //OcLogger::SetStdErrorThreshold(val);
 }
 
 bool ProgramOptions::log_prefix( void )
 {
-    return OcLogger::LogPrefix();
+	return false;// OcLogger::LogPrefix();
 }
 
 void ProgramOptions::log_prefix( bool val )
 {
-    OcLogger::SetLogPrefix(val);
+    //OcLogger::SetLogPrefix(val);
 }
 
 int ProgramOptions::minloglevel( void )
 {
-    return OcLogger::MinLogLevel();
+	return 0;// OcLogger::MinLogLevel();
 }
 
 void ProgramOptions::minloglevel( int val )
 {
-    OcLogger::SetMinLogLevel(val);
+    //OcLogger::SetMinLogLevel(val);
 }
 
 int ProgramOptions::logbuflevel( void )
 {
-    return OcLogger::LogBufferLevel();
+	return 0;//OcLogger::LogBufferLevel();
 }
 
 void ProgramOptions::logbuflevel( int val )
 {
-    OcLogger::SetLogBufferLevel(val);
+    //OcLogger::SetLogBufferLevel(val);
 }
 
 int ProgramOptions::logbufsecs( void )
 {
-    return OcLogger::LogBufferSeconds();
+	return 0;// OcLogger::LogBufferSeconds();
 }
 
 void ProgramOptions::logbufsecs( int val )
 {
-    OcLogger::SetLogBufferSeconds(val);
+    //OcLogger::SetLogBufferSeconds(val);
 }
 
 std::string ProgramOptions::log_dir( void )
 {
-    return OcLogger::LogDirectory();
+	return std::string();// OcLogger::LogDirectory();
 }
 
 void ProgramOptions::log_dir( const std::string & val )
 {
-    OcLogger::SetLogDirectory(val);
+    //OcLogger::SetLogDirectory(val);
 }
 
 std::string ProgramOptions::log_link( void )
 {
-    return OcLogger::LogLink();
+	return std::string();//OcLogger::LogLink();
 }
 
 void ProgramOptions::log_link( const std::string & val )
 {
-    OcLogger::SetLogLink(val);
+    //OcLogger::SetLogLink(val);
 }
 
 int ProgramOptions::max_log_size( void )
 {
-    return OcLogger::MaxLogSize();
+	return 0;// OcLogger::MaxLogSize();
 }
 
 void ProgramOptions::max_log_size( int val )
 {
-    OcLogger::SetMaxLogSize(val);
+    //OcLogger::SetMaxLogSize(val);
 }
 
 bool ProgramOptions::stop_logging_if_full_disk( void )
 {
-    return OcLogger::StopLoggingIfFullDisk();
+	return false;// OcLogger::StopLoggingIfFullDisk();
 }
 
 void ProgramOptions::stop_logging_if_full_disk( bool val )
 {
-    OcLogger::SetStopLoggingIfFullDisk(val);
+    //OcLogger::SetStopLoggingIfFullDisk(val);
 }
 
 int ProgramOptions::v( void )
 {
-    return OcLogger::VLOGLevel();
+	return 0;// OcLogger::VLOGLevel();
 }
 
 void ProgramOptions::v( int val )
 {
-    OcLogger::SetVLOGLevel(val);
+    //OcLogger::SetVLOGLevel(val);
 }
 
 std::string ProgramOptions::version( void )

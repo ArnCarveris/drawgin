@@ -101,14 +101,8 @@
  */
 #define USING_OCTAVARIUM_NS using namespace octavarium;
 
-// When GOOGLE_STRIP_LOG a VALUE is defined, the strings log strings below
-// the logging level of VALUE are removed from the compiled application.
-#ifdef NDEBUG
-#    define GOOGLE_STRIP_LOG 1
-#endif
 
 #include "OcObjectDef.h"
-#include "OcLogger.h"
 
 //#define  __FUNC__NAME__SIG__
 #ifdef _WIN32
@@ -118,16 +112,26 @@
 #        else
 #            define __FUNC__NAME__ __FUNCTION__
 #        endif
+#	 else
+#		define __FUNC__NAME__  __FUNCTION__
+//__func__
 #    endif
 #endif
 
+#include <iostream>
 
-#ifndef NDEBUG
+#define LOG(_l_) std::cout
+#define VLOG(_l_) std::cout
+#define CHECK(_expr_) if (!(_expr_)) std::cout
+#define DCHECK(_expr_) CHECK(_expr_)
+
+#include <wchar_logging.h>
+
+#if !defined(NDEBUG) && defined(__FUNC__NAME__)
 #    define VLOG_FUNC_NAME VLOG(5) << __FUNC__NAME__
 #else
 #    define VLOG_FUNC_NAME
 #endif
-
 
 
 #include "OcTypes.h"

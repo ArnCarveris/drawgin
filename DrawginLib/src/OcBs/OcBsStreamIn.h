@@ -47,6 +47,8 @@
 #include "OcBsStream.h"
 #include "OcDbObjectId.h"
 
+#include <vector>
+
 BEGIN_OCTAVARIUM_NS
 
 class OcBsStreamIn : public OcBsStream

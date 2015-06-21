@@ -42,9 +42,6 @@
     <ClInclude Include="inc\OcCommon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\OcLogger.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="inc\OcRxObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
